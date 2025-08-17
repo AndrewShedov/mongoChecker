@@ -81,7 +81,7 @@ export async function runMongoChecker(config) {
     }
 
     if (duplicates.length > shown) {
-      console.log(`...and ${duplicates.length - shown} more duplicates`);
+      console.log(`\n...and ${duplicates.length - shown} more duplicates`);
     }
 
     const duration = performance.now() - start;
