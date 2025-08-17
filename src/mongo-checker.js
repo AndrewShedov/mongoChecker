@@ -1,11 +1,12 @@
+// mongo-checker.js
 import { MongoClient } from "mongodb";
 import { performance } from "perf_hooks";
 
 /* --- core logic --- */
 export async function runMongoChecker(config) {
-  const requiredKeys = ["uri", "db", "collection", "field", "maxDuplicatesToShow"];
+  const requiredKeys = ["uri", "db", "collection", "field", "maxDuplicatesToShow", "allowDiskUse"];
   for (const key of requiredKeys) {
-    if (!config[key]) {
+    if (!config[key] && config[key] !== false) {
       console.error(`❌ Error: config missing required parameter - '${key}'.`);
       process.exit(1);
     }
@@ -19,7 +20,12 @@ export async function runMongoChecker(config) {
     process.exit(1);
   }
 
-  const { uri, db, collection, field, maxDuplicatesToShow } = config;
+  if (typeof config.allowDiskUse !== "boolean") {
+    console.error("❌ Error: 'allowDiskUse' must be a boolean (true/false).");
+    process.exit(1);
+  }
+
+  const { uri, db, collection, field, maxDuplicatesToShow, allowDiskUse } = config;
   const client = new MongoClient(uri);
 
   console.log("🔌 Connecting to MongoDB...\n");
@@ -27,6 +33,7 @@ export async function runMongoChecker(config) {
   console.log(`🗄️ Database:            ${db}`);
   console.log(`📂 Collection:          ${collection}`);
   console.log(`🔑 Search field:        ${field}`);
+  console.log(`💾 Allow disk use:      ${allowDiskUse}`);
   console.log(`👁️ Max show duplicates: ${maxDuplicatesToShow}\n`);
 
   const spinnerFrames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
@@ -52,9 +59,9 @@ export async function runMongoChecker(config) {
         [
           { $group: { _id: `$${field}`, count: { $sum: 1 } } },
           { $match: { count: { $gt: 1 } } },
-          { $sort: { count: -1 } },
+          { $sort: { count: -1 } }
         ],
-        { allowDiskUse: true }
+        { allowDiskUse }
       )
       .toArray();
 
