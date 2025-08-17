@@ -1,10 +1,18 @@
-// mongo-checker.js
 import { MongoClient } from "mongodb";
 import { performance } from "perf_hooks";
 
 /* --- core logic --- */
 export async function runMongoChecker(config) {
-  const requiredKeys = ["uri", "db", "collection", "field", "maxDuplicatesToShow", "allowDiskUse"];
+
+  const requiredKeys = [
+    "uri",
+    "db",
+    "collection",
+    "field",
+    "maxDuplicatesToShow",
+    "allowDiskUse"
+  ];
+
   for (const key of requiredKeys) {
     if (!config[key] && config[key] !== false) {
       console.error(`❌ Error: config missing required parameter - '${key}'.`);
@@ -25,7 +33,15 @@ export async function runMongoChecker(config) {
     process.exit(1);
   }
 
-  const { uri, db, collection, field, maxDuplicatesToShow, allowDiskUse } = config;
+  const {
+    uri,
+    db,
+    collection,
+    field,
+    maxDuplicatesToShow,
+    allowDiskUse
+  } = config;
+
   const client = new MongoClient(uri);
 
   console.log("🔌 Connecting to MongoDB...\n");
