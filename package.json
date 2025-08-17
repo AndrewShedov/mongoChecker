@@ -1,0 +1,29 @@
+{
+  "name": "mongo-checker",
+  "version": "0.1.1",
+  "description": "CLI tool to check duplicates in MongoDB collections by field",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "type": "module",
+  "author": {
+    "name": "Andrew Shedov",
+    "url": "https://shedov.top"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewShedov/mongoChecker.git"
+  },
+  "homepage": "https://github.com/AndrewShedov/mongoChecker",
+  "dependencies": {
+    "mongodb": "^6.16.0"
+  },
+  "files": [
+    "src"
+  ],
+  "bin": {
+    "mongo-checker": "./src/index.js"
+  }
+}
