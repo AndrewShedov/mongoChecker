@@ -70,16 +70,14 @@ export async function runMongoChecker(config) {
     const dbConn = client.db(db);
     const coll = dbConn.collection(collection);
 
-    const duplicates = await coll
-      .aggregate(
+    const duplicates = await coll.aggregate(
         [
           { $group: { _id: `$${field}`, count: { $sum: 1 } } },
           { $match: { count: { $gt: 1 } } },
           { $sort: { count: -1 } }
         ],
         { allowDiskUse }
-      )
-      .toArray();
+      ).toArray();
 
     clearInterval(spinnerInterval);
     if (process.stdout.clearLine) process.stdout.clearLine(0);
