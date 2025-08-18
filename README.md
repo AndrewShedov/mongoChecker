@@ -80,7 +80,7 @@ npm run mongoChecker
 **MongoDB is allowed to use temporary disk space for intermediate data.** <br/>
 
 **When to enable:** <br/>
-- When the server has limited RAM.<br/>
+- With a small amount of RAM.<br/>
 - For large collections (tens of millions of documents or more), to avoid out-of-memory errors.<br/>
 
 **Drawbacks:** <br/>
