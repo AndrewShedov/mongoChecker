@@ -4,7 +4,7 @@
 
 # mongoChecker
 
-This package is designed to search for duplicate values in a MongoDB collection by a chosen field.
+CLI tool to search for duplicate values in a MongoDB collection by a chosen field.
 
 ### Features
 - Finds duplicates by any user-defined field (**"createdAt"**, **"text"**, **"price"**, etc).

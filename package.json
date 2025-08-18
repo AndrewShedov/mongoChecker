@@ -1,12 +1,17 @@
 {
   "name": "mongo-checker",
-  "version": "0.1.8",
-  "description": "CLI tool to check duplicates in MongoDB collections by field",
+  "version": "0.1.9",
+  "description": "CLI tool to search for duplicate values in a MongoDB collection by a chosen field",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
   },
   "type": "module",
+  "keywords": [
+    "mongodb",
+    "cli",
+    "checker"
+  ],
   "author": {
     "name": "Andrew Shedov",
     "url": "https://shedov.top"
