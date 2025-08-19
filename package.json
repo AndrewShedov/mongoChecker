@@ -1,6 +1,6 @@
 {
   "name": "mongo-checker",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "CLI tool to search for duplicate values in a MongoDB collection by a chosen field",
   "main": "./src/index.js",
   "exports": {
@@ -10,7 +10,17 @@
   "keywords": [
     "mongodb",
     "cli",
-    "checker"
+    "checker",
+    "duplicates",
+    "duplicate-finder",
+    "aggregation",
+    "mongo-check",
+    "find-duplicates",
+    "mongo-utils",
+    "data-cleaning",
+    "data-quality",
+    "deduplication",
+    "big-data"
   ],
   "author": {
     "name": "Andrew Shedov",
