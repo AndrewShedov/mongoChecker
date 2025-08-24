@@ -83,7 +83,7 @@ export async function runMongoChecker(config) {
     if (process.stdout.clearLine) process.stdout.clearLine(0);
     if (process.stdout.cursorTo) process.stdout.cursorTo(0);
 
-    console.log(`✅ Found ${duplicates.length} duplicates for field "${field}".`);
+    console.log(`✅ Found ${duplicates.length} duplicates for field "${field}"`);
 
     const shown = Math.min(maxDuplicatesToShow, duplicates.length);
     for (let i = 0; i < shown; i++) {
