@@ -13,7 +13,7 @@ CLI tool to search for duplicate values in a MongoDB collection by a chosen fiel
 - Informative logs:
 <img src="https://raw.githubusercontent.com/AndrewShedov/mongoChecker/refs/heads/main/assets/screenshot_1.png" width="450" />
 
-In the screenshot, an example of checking the collection **"posts"** (10.000.000 documents) by field **"createdAt"**.
+In the screenshot, an example of checking the collection **"posts"** (10,000,000 documents) by field **"createdAt"**.
 ### How it works
 **Aggregation pipeline:**
 
