@@ -98,7 +98,7 @@ export async function runMongoChecker(config) {
         val = String(d._id);
       }
 
-      console.log(`\n📌 ${val} — ${d.count} times`);
+      console.log(`\n📌 ${val} — ${d.count.toLocaleString("en-US")} times`);
     }
 
     if (duplicates.length > shown) {
