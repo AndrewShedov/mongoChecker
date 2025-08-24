@@ -1,6 +1,6 @@
 {
   "name": "mongo-checker",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "CLI tool to search for duplicate values in a MongoDB collection by a chosen field",
   "main": "./src/index.js",
   "exports": {
@@ -31,7 +31,7 @@
     "type": "git",
     "url": "git+https://github.com/AndrewShedov/mongoChecker.git"
   },
-  "homepage": "https://github.com/AndrewShedov/mongoChecker",
+  "homepage": "https://shedov.top",
   "dependencies": {
     "mongodb": "^6.16.0"
   },
