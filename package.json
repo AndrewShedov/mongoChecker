@@ -1,7 +1,7 @@
 {
   "name": "mongo-checker",
-  "version": "0.1.23",
-  "description": "CLI tool built with Node.js to search for duplicate values in a MongoDB collection by a chosen field.",
+  "version": "0.1.24",
+  "description": "CLI tool for searching duplicate values in a MongoDB collection by a chosen field.",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
