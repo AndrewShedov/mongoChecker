@@ -73,7 +73,7 @@ export default {
 npm run mongoChecker
 ```
 
-## Config parameters explained
+### Config parameters
 
 <code>allowDiskUse: true</code>
 
