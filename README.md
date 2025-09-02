@@ -102,7 +102,7 @@ In-memory operations are often much faster than disk-based ones - **allowDiskUse
 
 Limits the maximum number of duplicate values displayed in the output.
 
-#### An example of mongoChecker in operation: <br>
+An example of mongoChecker in operation: <br>
 
 <p align="center">
 <a href="https://youtu.be/5V4otU4KZaA?t=82">
