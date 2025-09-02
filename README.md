@@ -13,7 +13,7 @@ CLI tool for searching duplicate values in a MongoDB collection by a chosen fiel
 - Informative logs:
 <img src="https://raw.githubusercontent.com/AndrewShedov/mongoChecker/refs/heads/main/assets/screenshot_1.png" width="450" />
 
-In the screenshot, an example of checking the collection **"posts"** (10,000,000 documents) by field **"createdAt"**.
+In the screenshot, an example of checking the collection **"posts"** (10,000,000 documents) by field **"createdAt"**. Documents created in [turboMaker](https://www.npmjs.com/package/turbo-maker), with value - timeStepMs: 0.
 ### How it works
 **Aggregation pipeline:**
 
@@ -50,18 +50,18 @@ npm i mongo-checker
 }
 ```
 
-3. In the root of the project, create a file - **[mongo-checker.config.js](https://github.com/AndrewShedov/mongoChecker/blob/main/config%20example/mongo-checker.config.js)**.
+3. In the root of the project, create a file - **mongo-checker.config.js**.
 
 Example of file contents:
 
 ```js
 export default {
   uri: "mongodb://127.0.0.1:27017",
-  db: "crystal",
+  db: "crystalTest",
   collection: "posts",
   field: "createdAt",
-  allowDiskUse: false,
-  maxDuplicatesToShow: 3
+  allowDiskUse: true,
+  maxDuplicatesToShow: 5
 };
 ```
 
@@ -73,7 +73,7 @@ export default {
 npm run mongoChecker
 ```
 
-### Config parameters
+## Config parameters explained
 
 <code>allowDiskUse: true</code>
 
@@ -100,5 +100,13 @@ In-memory operations are often much faster than disk-based ones - **allowDiskUse
 <code>maxDuplicatesToShow</code>
 
 Limits the maximum number of duplicate values displayed in the output.
+
+#### An example of mongoChecker in operation: <br>
+
+<p align="center">
+<a href="https://youtu.be/5V4otU4KZaA?t=82">
+  <img src="https://raw.githubusercontent.com/AndrewShedov/mongoChecker/refs/heads/main/assets/screenshot_2.png" style="width: 100%; max-width: 100%;" alt="CRYSTAL v1.0 features"/>
+</a>
+</p>
 
 [SHEDOV.TOP](https://shedov.top/) | [CRYSTAL](https://crysty.ru/AndrewShedov) | [Discord](https://discord.gg/ENB7RbxVZE) | [Telegram](https://t.me/ShedovChannel) | [X](https://x.com/AndrewShedov) | [VK](https://vk.com/shedovclub) | [VK Video](https://vkvideo.ru/@shedovclub) | [YouTube](https://www.youtube.com/@AndrewShedov)
