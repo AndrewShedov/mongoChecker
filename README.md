@@ -36,6 +36,7 @@ Array/Object → <code>JSON.stringify</code><br/>
 Other → <code>String(value)</code><br/>
 
 ### Installation & Usage
+
 1. Install the package:
 
 ```bash
