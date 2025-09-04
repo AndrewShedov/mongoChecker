@@ -1,6 +1,6 @@
 {
   "name": "mongo-checker",
-  "version": "0.1.33",
+  "version": "0.1.35",
   "description": "CLI tool for searching duplicate values in a MongoDB collection by a chosen field.",
   "main": "./src/index.js",
   "exports": {

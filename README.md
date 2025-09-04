@@ -8,7 +8,7 @@ CLI tool for searching duplicate values in a MongoDB collection by a chosen fiel
 
 ### Features
 - Finds duplicates by any user-defined field (**"createdAt"**, **"text"**, **"price"**, etc).
-- Dates are formatted as ISO; arrays/objects are output via JSON.stringify.
+- Dates are formatted as ISO. Arrays and objects are output via JSON.stringify.
 - Works with a configuration file containing: <code>uri</code>, <code>db</code>, <code>collection</code>, <code>field</code>, <code>allowDiskUse</code>, <code>maxDuplicatesToShow</code>.
 - Informative logs:
 <img src="https://raw.githubusercontent.com/AndrewShedov/mongoChecker/refs/heads/main/assets/screenshot_1.png" width="450" />
