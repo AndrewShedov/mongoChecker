@@ -100,7 +100,7 @@ In-memory operations are often much faster than disk-based ones - **allowDiskUse
 
 Limits the maximum number of duplicate values displayed in the output.
 
-<br>
+
 
 ### An example of mongoChecker in operation: <br>
 
@@ -110,6 +110,8 @@ Limits the maximum number of duplicate values displayed in the output.
   <img src="https://raw.githubusercontent.com/AndrewShedov/mongoChecker/refs/heads/main/assets/screenshot_2.1.png" style="width: 100%; max-width: 100%;" alt="CRYSTAL v1.0 features"/>
 </a>
 </p>
+
+<br>
 
 [![SHEDOV.TOP](https://img.shields.io/badge/SHEDOV.TOP-black?style=for-the-badge)](https://shedov.top/) 
 [![CRYSTAL](https://img.shields.io/badge/CRYSTAL-black?style=for-the-badge)](https://crystal.you/AndrewShedov)
